@@ -1,0 +1,112 @@
+header{
+  background-color: #4b6b5c;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.nav{
+  margin-top: 20px;
+}
+
+.imglogo{
+  padding-top: 1em;
+  margin-top: 1em;
+}
+
+a{
+  color: white;
+}
+.navha{
+  color: white;
+  padding-left: 45em;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1em;
+}
+
+.navhb{
+  color: white;;
+  padding-left: 102.5em;
+  display: flex;
+  justify-content:space-around;
+  margin-left: 100em; 
+}
+
+.insconex{
+  margin-left: 100em;
+  margin-top: -10m;
+}
+
+.panier{
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 113em;
+  margin-top: -5.5;
+}
+
+.h21{
+  text-align: center;
+}
+
+.h3_1{
+  text-align: center;
+}
+
+.section1{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  
+} 
+  .img1{
+      height:25em;
+  }
+
+  .img2{
+      width: 25em;
+      height: 25em;
+  }
+
+footer{
+  background-color: #4b6b5c;
+  width: 100%;
+
+}
+
+.sectionFooter{
+ 
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.sns{
+  margin-bottom: 5rem;
+  
+}
+
+.logoFb{
+  height: 25px;
+  width: 25px;
+  margin-left: 127px;
+  margin-top: -29px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
