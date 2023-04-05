@@ -22,90 +22,51 @@
   {% endblock %}
 </head>
 
+
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg py-3 navbar-dark bg- shadow-sm">
-      <div class="container">
-        <a href="#" class="navbar-brand">
-          <!-- Logo Image -->
-          <img  src="{{ asset('/img/entete.png') }}" width="500" alt="" class="d-inline-block align-middle mr-2">
-          <!-- Logo Text -->
-
-        </a>
-
-        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-          class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-
-        <div id="navbarSupportedContent" class="collapse navbar-collapse">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="/" class="nav-link">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="{{path('app_produits_index')}}" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Nos produits
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{{path('app_produits_index')}}">Alimentaire</a></li>
-                <li><a class="dropdown-item" href="#">Accessoires</a></li>
-                <li><a class="dropdown-item" href="#">Cages</a></li>
-                <li><a class="dropdown-item" href="#">Volieres</a></li>
-                <li><a class="dropdown-item" href="#">Oiseaux</a></li>
-              </ul>
-
-
-            <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-            <li class="nav-item"><a href="{{path('app_register')}}" class="nav-link">S'inscrire</a></li>
-            <li class="nav-item"><a href="{{path('app_login')}}" class="nav-link">Se connecter</a></li>
-
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="{{ asset('/img/entete.png') }}" alt="..." height="100">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Accueil</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Nos produits
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{{path('app_produits_index')}}">Alimentaire</a></li>
+              <li><a class="dropdown-item" href="#">Accessoires</a></li>
+              <li><a class="dropdown-item" href="#">Cages</a></li>
+              <li><a class="dropdown-item" href="#">Volieres</a></li>
+              <li><a class="dropdown-item" href="#">Oiseaux</a></li>
+              
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{path('app_register')}}">S'inscrire</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{path('app_login')}}">Se connecter</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
   </header>
 
-  {#
-  <!-- FOR DEMO PURPOSE-->
-  <section class="py-5">
-    <div class="container py-5">
-      <ol class="pl-3">
-        <li class="mb-3">Add your logo image inside<code>a.navbar-brand</code></li>
-        <li class="mb-3">You can set the logo width and height by<code>width=""</code>,<code>height=""</code>
-          attributes.</li>
-        <li class="mb-3">Add one of <code>.align-top .align-middle .align-bottom</code> classes to vertically adapt
-          adjacent text with the image.</li>
-      </ol>
 
-      <p class="text-muted mt-5">Snippet by <a href="https://bootstrapious.com/snippets" class="text-reset">
-          <u>Bootstrapious</u></a>
-      </p>
-      </p>
-
-    </div>
-  </section> #}
-  {#
-
-
-  <!-- FOR DEMO PURPOSE-->
-  <section class="py-5">
-    <div class="container py-5">
-      <ol class="pl-3">
-        <li class="mb-3">Add your logo image inside<code>a.navbar-brand</code></li>
-        <li class="mb-3">You can set the logo width and height by<code>width=""</code>,<code>height=""</code>
-          attributes.</li>
-        <li class="mb-3">Add one of <code>.align-top .align-middle .align-bottom</code> classes to vertically adapt
-          adjacent text with the image.</li>
-      </ol>
-
-      <p class="text-muted mt-5">Snippet by <a href="https://bootstrapious.com/snippets" class="text-reset">
-          <u>Bootstrapious</u></a>
-      </p>
-      </p>
-
-    </div>
-  </section> #}
-
-  {# </header> #}
 
 
   {% block body %}{% endblock %}
