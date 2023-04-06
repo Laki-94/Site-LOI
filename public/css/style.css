@@ -7,11 +7,17 @@ body {
 header{
   background-color: #4b6b5c;
 }
+.text-fofo{
+  color: rgb(255, 252, 252);
+}
 
 footer{
   width: 100%;
   position: absolute;
 }
 
+.tailleForm{
+  width: 600px;
+}
 
 /* #4b6b5c */
