@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+    background-color: #4b6b5c;
+    border: 1px;
+    border-radius: 15px;
+    color: #fff;        
+    margin-top: 15px;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+
+.btnrc{
+    color: #fff;
+    background-color: #D6843C;
+    display: flex;
+    justify-content: center ;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.btn{
+    color: #fff;
+    background-color: #4b6b5c;
+    display: flex;
+    justify-content: center ;
+    text-decoration: none;
+    border-radius: 15px;
+}

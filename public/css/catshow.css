@@ -1,0 +1,54 @@
+.h2cart{
+    background-color: #4b6b5c;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    padding-bottom: 3px;
+}
+
+h1{
+    text-align: center;
+    background-color: #4b6b5c;
+    border: 1px;
+    border-radius: 15px;
+    color: #fff;        
+    margin-top: 15px;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+.basdepage{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    
+}
+.btnpanier{
+        color: #fff;
+        border: 0px;
+        padding-bottom: 100px;
+        padding-top: 10px;
+}
+
+.btn{
+    color: #fff;
+    background-color: #4b6b5c;
+    display: flex;
+    justify-content: center ;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.btnrc{
+    color: #fff;
+    background-color: #D6843C;
+    display: flex;
+    justify-content: center ;
+    text-decoration: none;
+    border-radius: 15px;
+}
+    
+
+

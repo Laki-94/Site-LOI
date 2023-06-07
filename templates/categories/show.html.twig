@@ -1,52 +1,60 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Categories{% endblock %}
-
-{% block body %}
-<head>
-    <meta charset="UTF-8" />
+{% block title %}
+    Produits
+    
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/catshow.css') }}">
     <link rel="stylesheet" href="{{ asset('css/btn.css') }}">
-    <script src="{{ asset('js/home.js') }}" defer></script>
-</head>
-    <h1 class="text-center"> Catégorie : {{category.nom}}  </h1>
+    {% endblock %}
+    {% block body %}
+        <head>
+            <meta charset="UTF-8" />
+                <script src="{{ asset('js/home.js') }}" defer></script>
+            </head>
+            <div class="container">
+                <h1 class="text-center">
+                    {{ category.nom }}
+                </h1>
 
-    <table class="table">
-    <div class=" row m-4 ">
-        {% for produit in category.produits %}
-        <div class="col-md-3">
-            <div class="card border-dark mt-4 m-4 w-75 h-75 ">
-                <img src="{{ asset('img/') ~ produit.nomimage }}" class="card-img-top w-50 h-50 rounded mx-auto d-block" alt="...">
-                    <div class="card-body  ">
-                        <h5 class="card-title text-center">
-                            {{ produit.nom }}
-                        </h5>
-                        <p class="card-text">
-                            {{ produit.description }}
-                        </p>
-                        <p class="card-text">
-                            {{ produit.prix }} €
-                        </p>
-                        <a href="{{ path('app_cart_add', {'id': produit.id }) }}">
-                            <button type="button" class="btn btn-primary">
-                                Ajouter au panier
-                            </button>
-                        </a>
-                        
-                        <a href="{{ path('app_produits_show', {'id': produit.id}) }}">
-                            <button type="button" class="btn btn-primary">
-                                Voir le produit
-                            </button>
-                        </a>
+            </div>
+            <table class="table">
+                <div class="container">
+                    <div class="row ">
+                        {% for produit in category.produits %}
+                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="card border-dark mb-4">
+                                    <img src="{{ asset('img/') ~ produit.nomimage }}" class="card-img-top  rounded mx-auto d-block" alt="image du produit">
+                                        <div class="card-block  ">
+                                            <h5 class="card-title text-center">
+                                                {{ produit.nom }}
+                                            </h5>
+                                            <p class="card-text">
+                                                {{ produit.description }}
+                                            </p>
+                                            <p class="card-text">
+                                                {{ produit.prix }}
+                                                €
+                                                                                    
+                                            </p>
+                                            <a href="{{ path('app_cart_add', {'id': produit.id }) }}">
+                                                <button type="button" class="btn mt-2">
+                                                    Ajouter au panier
+                                                                                            
+                                                </button>
+                                            </a>
+                                            <a href="{{ path('app_produits_show', {'id': produit.id}) }}">
+                                                <button type="button" class="btn mt-2">
+                                                    Voir le produit
+                                                                                            
+                                                </button>
+                                            </a>
+                                        </div>
+                                </div>
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
-            </div>
-        {% endfor %}
-    </table>
-    <a href="{{ path('app_home') }}">
-    <button type="button" class="btn btn-primary">
-        Retour a l'aceuil
-    </button>
-</a>
-    
-
-{% endblock %}
+            </table>
+    {% endblock %}
+                    

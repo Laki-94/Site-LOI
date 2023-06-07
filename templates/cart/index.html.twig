@@ -4,16 +4,18 @@
 
 {% block body %}
 <head>
-    <meta charset="UTF-8" />
     <link rel="stylesheet" href="{{ asset('css/btn.css') }}">
     <link rel="stylesheet" href="{{ asset('css/cart.css') }}">
 
 
 </head>
+<div class="container">
 <h1>Mon panier</h1>
+</div>
 
 
     <table class="table mx-auto p4 mt6" style="width: 600px;">
+    <div class="container">
         <thead>
             <tr>
                 {# <th>Id_produit</th> #}
@@ -58,21 +60,23 @@
             </tr>
         {% endfor %}
         </tbody>
+    
     </table>
 
+    <div class="container">
     <div class="row">
     <div class="basdepage col-12 ">
     <h2 class="h2cart col-12" >Montant Total : {{ totalcomplet }}€ </h2>
-
+    </div>
         <div class="btn3">
-            <a href="{{ path('app_categories_index') }}">
-                <button type="button" class="btn col-4 table mx-auto p4 mt6" style="width: 600px;">
-                    Continuer mes achats
-                </button>
-            </a>
             <a href="{{ path('app_commande') }}">
                 <button type="button" class="btn col-4 table mx-auto p4 mt6" style="width: 600px;">
                     Commander
+                </button>
+            </a>
+            <a href="{{ path('app_categories_index') }}">
+                <button type="button" class="btn col-4 table mx-auto p4 mt6" style="width: 600px;">
+                    Continuer mes achats
                 </button>
             </a>
             <a href="{{ path('app_cart_clear') }}">
@@ -81,6 +85,8 @@
                 </button>
             </a>
         </div>
+    
+    </div>
     </div>
         {# </div>
     <div class="btnpanier">

@@ -4,10 +4,7 @@
     
 {% endblock %}
 {% block body %}
-    <h1>
-        Liste des catégories
-        
-    </h1>
+    
     {# <table class="table">
             <thead>
                 <tr>
@@ -39,17 +36,21 @@
         Produits par catégories
     </h1>
     <table class="table">
+    <div class="container">
         <div class=" row m-4 ">
+        <div>
+            <img class="d-block mx-auto p-2 mb-4 mt-4 w-25 h-75" style="width:500px; height:auto" src="/img/test/toucan.jpg" alt=" oiseauchoucador">
+        </div>
             {% for category in categories %}
-                <div class="col-md-3">
-                    <div class="card border-dark mt-4 m-4 w-75 h-75 ">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card border-dark mt-2 m-2 ">
                         <div class="card-body  ">
                             <p class="card-title">
                                 {{ category.nom }}
                             </p>
                             <a href="{{ path('app_categories_show', {'id': category.id}) }}">
                                 <button type="button" class="btn btn-primary">
-                                    Voir les produits de cette catégories
+                                    Voir les produits
                                 </button>
                             </a>
                         </div>
@@ -57,6 +58,7 @@
                 </div>
             {% endfor %}
         </div>
+    </div>
     </table>
         {% endblock %}
         
