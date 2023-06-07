@@ -1,0 +1,50 @@
+h1{
+    text-align: center;
+    color: #4b6b5c;
+    margin-top: 50px;
+}
+
+.carousel{
+    height: 520px;
+    width: 520px;
+    margin:auto;
+    margin-top: 70px;
+
+}
+
+.imghompage{
+    height: 520px;
+    width: 520px;
+}
+
+.img2{
+     width: 300px;  
+     margin-bottom:50px;
+}
+
+.para2{
+    text-align: center;
+    /* margin-top:10px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: auto;
+}
+
+.parafin{
+    text-align: center;
+    /* margin: top 100px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: auto;
+}
+
+.para1{
+    text-align: center;
+    /* margin-top:10px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* padding: auto; */
+}

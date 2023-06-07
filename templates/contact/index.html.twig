@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/styleForm.css') }}">
+{% endblock %}
+
+{% block title %}
+    Contactez nous
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+    <div class="mx-auto p-4 mt-6" style="width: 600px;">
+        <div class="col-12 décalage-3 register text-center" style="background-color: #4b6b5c">
+            <div>
+            <img class="d-block mx-auto p-2 mb-4 mt-4" style="width:500px; height:auto" src="/img/test/toucan.jpg" alt=" oiseauchoucador"></div>
+                <div class="card-body">
+                    <h1 class="text-center text-fofo">
+                    Formulaire de contacter
+                    </h1>
+                    <p>
+                        Remplissez le formulaire ci-dessous pour nous contacter. Nous vous repondons dans les 72 heures.
+                    </p>
+                    {{ form_start(form) }}
+                    {{ form_widget(form.votre_nom) }}
+                    {{ form_widget(form.votre_email) }}
+                    {{ form_widget(form.votre_telephone) }}
+                    {{ form_widget(form.votre_adresse) }}
+                    {{ form_widget(form.votre_message) }}
+                    {{ form_end(form) }}
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>{% endblock %}

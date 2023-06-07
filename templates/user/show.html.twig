@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}utilisateur{% endblock %}
+
+{% block body %}
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{{ asset('css/btn.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/user.css') }}">
+    <script src="{{ asset('js/home.js') }}" defer></script>
+</head>
+    {# <h1>Mon compte</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Email</th>
+                <td>{{ user.email }}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{ user.password }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ user.Adresse }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ user.Nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ user.Prenom }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ user.Telephone }}</td>
+            </tr>
+            <tr>
+                <th>Compte vérifié</th>
+                <td>{{ user.isVerified ? 'Yes' : 'No' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+<br>
+    <a href="{{ path('app_user_edit', {'id': user.id}) }}">Modifier</a> #}
+    
+    <h1 class="text-center">
+    Mon compte
+    </h1>
+    <table class="table">
+        <div class=" row m-4 text-center">
+                <div class="col-12">
+                    <div class="card border-dark mt-6 m-4 w-80 h-80 ">
+                        <div class="card-body  ">
+                            <p class="card-title">
+                                {{ user.nom }}
+                            </p>
+                            <p class="card-text">
+                                {{ user.prenom }}
+                            </p>
+                            <p class="card-text">
+                                {{ user.email }}
+                            </p>
+                            <p class="card-text">
+                                {{ user.telephone }}
+                            </p>
+                            <p class="card-text">
+                                {{ user.adresse }}
+                            </p>
+                            <p class="card-text">
+                        Compte vérifié : {{ user.isVerified ? 'Yes' : 'No' }}
+                            </p>
+                            <a href="{{ path('app_user_edit', {'id': user.id}) }}">
+                                <button type="button" class="btn btn-primary">
+                                    Modifier mon profile                   
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </table>
+{% endblock %}

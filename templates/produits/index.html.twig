@@ -3,41 +3,36 @@
 {% block title %}Produits index{% endblock %}
 
 {% block body %}
-    <h1>Produits index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Quantite</th>
-                <th>Nom</th>
-                <th>Description</th>
-                <th>Prix</th>
-                <th>Nomimage</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
+    <h1 class="text-center">NOS PRODUITS</h1>
+        <div class=" row m-4 ">
         {% for produit in produits %}
-            <tr>
-                <td>{{ produit.id }}</td>
-                <td>{{ produit.quantite }}</td>
-                <td>{{ produit.nom }}</td>
-                <td>{{ produit.description }}</td>
-                <td>{{ produit.prix }}</td>
-                <td>{{ produit.nomimage }}</td>
-                <td>
-                    <a href="{{ path('app_produits_show', {'id': produit.id}) }}">show</a>
-                    <a href="{{ path('app_produits_edit', {'id': produit.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="7">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            <div class="col-3">
+                <div class="card border-dark mt-4 m-4 ">
+                    <img src="{{ asset('img/') ~ produit.nomimage }}" class="card-img-top w-50 h-50" alt="...">
+                        <div class="card-body  ">
+                            
+                            <h5 class="card-title">
+                                {{ produit.nom }}
+                            </h5>
+                            <p class="card-text">
+                                {{ produit.description }}
+                            </p>
+                            <p class="card-text">
+                                {{ produit.prix }}
+                            </p>
+                            <a href="{{ path('app_cart_add', {'id': produit.id }) }}">
+                                <button type="button" class="btn btn-primary">
+                                    Ajouter au panier
+                                </button>
+                            </a>
+                            <a href="{{ path('app_produits_show', {'id': produit.id}) }}">
+                                <button type="button" class="btn btn-primary">
+                                    Detail
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
 
-    <a href="{{ path('app_produits_new') }}">Create new</a>
 {% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commande validé{% endblock %}
+
+{% block body %}
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{{ asset('css/succes.css') }}">
+    <script src="{{ asset('js/home.js') }}" defer></script>
+</head>
+
+<h1>
+La commande a bien été validé !!!
+</h1>
+<br>
+<a href="{{ path('app_user_show')}}">
+    <button type="button" class="btn col-4 table mx-auto p4 mt6" style="width: 600px;"">
+        Retourner sur mon compte                  
+    </button>
+</a>
+</h1>
+
+{% endblock %}

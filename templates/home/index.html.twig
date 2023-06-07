@@ -1,6 +1,113 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Accueil{% endblock %}
-
+{% block title %}
+Accueil
+{% endblock %}
 {% block body %}
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <script src="{{ asset('js/home.js') }}" defer></script>
+</head>
+
+<body>
+    <h1>Bienvenue sur notre site dédié aux oiseaux exotiques insectivores et frugivores ! </h1>
+    <div class="row">
+        <div class="para1">
+            <p class="col-md-4 ">Notre site est dédié à fournir des informations détaillées sur les différentes espèces
+                d'oiseaux exotiques
+                insectivores et frugivores. Vous y trouverez des conseils pratiques sur leur alimentation, des
+                recommandations sur les types de fruits et d'insectes à leur offrir, ainsi que des astuces pour créer un
+                environnement favorable à leur épanouissement.
+
+                Nous espérons que notre site vous inspirera à en apprendre davantage sur ces magnifiques créatures et
+                vous
+                guidera dans votre parcours pour offrir une nutrition optimale à vos oiseaux exotiques insectivores et
+                frugivores. Ensemble, nous pouvons contribuer à préserver leur beauté et leur diversité pour les
+                générations
+                futures.</p>
+            <div id="carousel" class="carousel carousel-dark slide col-md-6" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="4000">
+                        <img src="{{ asset('img/test/900.jpg') }}" class="d-block w-100" alt="...">
+                        {# <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div> #}
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="{{ asset('img/test/1800.jpg') }}" class="d-block w-100" alt="...">
+                        {# <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div> #}
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="{{ asset('img/test/touraco.jpg') }}" class="d-block w-100" alt="...">
+                        {# <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div> #}
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <p class="col-md-4">Les oiseaux exotiques insectivores et frugivores sont de véritables merveilles de la
+                nature.
+                Leur beauté et
+                leur diversité en font des créatures fascinantes à observer et à apprécier. Ces oiseaux se nourrissent
+                principalement d'insectes et de fruits, ce qui constitue une part essentielle de leur régime
+                alimentaire. Il
+                est primordial de leur fournir une nutrition adéquate pour leur bien-être et leur santé.
+                Une alimentation équilibrée et riche en nutriments est essentielle pour maintenir leur vitalité,
+                favoriser
+                leur système immunitaire et prévenir les maladies. En comprenant leurs besoins spécifiques, nous pouvons
+                les
+                aider à prospérer et à vivre une vie épanouie.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="para2">
+            <div class="col-md-6">
+                <h2>Les oiseaux exotiques insectivores</h2>
+                <p>Les insectivores ont développé une technique de chasse bien spécifique pour attraper leurs proies
+                    volantes. Leur agilité, leur rapidité et leur précision en font des chasseurs redoutables. Ils
+                    jouent également un rôle crucial dans l'écosystème en aidant à réguler les populations d'insectes
+                    nuisibles.</p>
+            </div>
+            <div class="col-md-6">
+                <a class="navbar-brand img2">
+                    <img classe="imghompage" src="{{ asset('/img/test/sumbawa_drossel.jpg') }}" alt="Grive d'oerty">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="para2">
+            <div class="col-md-6">
+                <a class="navbar-brand img2">
+                    <img classe="imghompage" src="{{ asset('/img/test/touraco.jpg') }}" alt="Touraco">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h2>Les oiseaux exotiques Frugivores</h2>
+                <p>D'un autre côté, les frugivores se délectent des délices sucrés que les fruits leur offrent. Leur bec
+                    adapté leur permet de se nourrir de manière efficace et de profiter des nutriments essentiels
+                    contenus dans les fruits. Ils contribuent également à la dispersion des graines, ce qui favorise la
+                    reproduction des plantes.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
 {% endblock %}

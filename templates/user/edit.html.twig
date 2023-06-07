@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit User{% endblock %}
+
+{% block body %}
+    <h1 <div class=" row m-4 text-center"> Modifier mon Profile</h1>
+
+    {{ include('user/_form.html.twig', {'button_label': 'Enregistrer'}) }}
+
+    <a href="{{ path('app_user_show') }}">Annuler</a>
+
+{% endblock %}

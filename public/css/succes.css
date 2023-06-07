@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+    color: #4b6b5c;
+    margin-top: 50px;
+}
+
+.btn{
+    background-color: #4b6b5c;
+    color: #fff;
+    border: 0px;
+    padding-bottom: 10px;
+}

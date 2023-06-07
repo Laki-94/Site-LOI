@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produits{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">Produits</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ produit.id }}</td>
+            </tr>
+            <tr>
+                <th>Quantite</th>
+                <td>{{ produit.quantite }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ produit.nom }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ produit.description }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ produit.prix }}</td>
+            </tr>
+            <tr>
+                <th>Nomimage</th>
+                <td>{{ produit.nomimage }}</td>
+            </tr>
+            <tr>
+                <th>Catégories</th>
+                <td>{{ produit.categorie }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_produits_index') }}">back to list</a>
+
+    <a href="{{ path('app_admin_produits_edit', {'id': produit.id}) }}">edit</a>
+
+    {{ include('admin_produits/_delete_form.html.twig') }}
+{% endblock %}

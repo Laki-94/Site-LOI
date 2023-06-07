@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Categories{% endblock %}
+
+{% block body %}
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{{ asset('css/btn.css') }}">
+    <script src="{{ asset('js/home.js') }}" defer></script>
+</head>
+    <h1 class="text-center"> Catégorie : {{category.nom}}  </h1>
+
+    <table class="table">
+    <div class=" row m-4 ">
+        {% for produit in category.produits %}
+        <div class="col-md-3">
+            <div class="card border-dark mt-4 m-4 w-75 h-75 ">
+                <img src="{{ asset('img/') ~ produit.nomimage }}" class="card-img-top w-50 h-50 rounded mx-auto d-block" alt="...">
+                    <div class="card-body  ">
+                        <h5 class="card-title text-center">
+                            {{ produit.nom }}
+                        </h5>
+                        <p class="card-text">
+                            {{ produit.description }}
+                        </p>
+                        <p class="card-text">
+                            {{ produit.prix }} €
+                        </p>
+                        <a href="{{ path('app_cart_add', {'id': produit.id }) }}">
+                            <button type="button" class="btn btn-primary">
+                                Ajouter au panier
+                            </button>
+                        </a>
+                        
+                        <a href="{{ path('app_produits_show', {'id': produit.id}) }}">
+                            <button type="button" class="btn btn-primary">
+                                Voir le produit
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </table>
+    <a href="{{ path('app_home') }}">
+    <button type="button" class="btn btn-primary">
+        Retour a l'aceuil
+    </button>
+</a>
+    
+
+{% endblock %}

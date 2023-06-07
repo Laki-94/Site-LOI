@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Categories index
+    
+{% endblock %}
+{% block body %}
+    <h1>
+        Liste des catégories
+        
+    </h1>
+    {# <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nom</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for category in categories %}
+                <tr>
+                    <td>{{ category.id }}</td>
+                    <td>{{ category.nom }}</td>
+                    <td>
+                        <a href="{{ path('app_categories_show', {'id': category.id}) }}">Voir</a>
+                        <a href="{{ path('app_categories_edit', {'id': category.id}) }}">Modifier</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="3">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    
+        <a href="{{ path('app_categories_new') }}">Créer une categorie</a> #}
+    <h1 class="text-center">
+        Produits par catégories
+    </h1>
+    <table class="table">
+        <div class=" row m-4 ">
+            {% for category in categories %}
+                <div class="col-md-3">
+                    <div class="card border-dark mt-4 m-4 w-75 h-75 ">
+                        <div class="card-body  ">
+                            <p class="card-title">
+                                {{ category.nom }}
+                            </p>
+                            <a href="{{ path('app_categories_show', {'id': category.id}) }}">
+                                <button type="button" class="btn btn-primary">
+                                    Voir les produits de cette catégories
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </table>
+        {% endblock %}
+        

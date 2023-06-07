@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block title %}
-Register
+S"inscrire
 {% endblock %}
 
 
@@ -31,15 +31,15 @@ Register
                     {{ form_row(registrationForm.plainPassword, {
                     label: 'Password'
                     }) }}
-                    {# {{ form_row(registrationForm.agreeTerms) }}
-                    <button type="submit" class="btn">
-                        Register
-                    </button> #}
-                    {{ form_end(registrationForm) }}
-                    <button class="p-2 mb-4 bg-white text-dark" btn-block >
-                        Valider
+                    {{ form_row(registrationForm.agreeTerms) }}
+                    <button type="submit" class="p-2 mb-4 bg-white text-dark" btn-block>
+                        S'enregistrer
                     </button>
                     {{ form_end(registrationForm) }}
+                    {# <button type="submit" class="p-2 mb-4 bg-white text-dark" btn-block >
+                        S'enregistrer
+                    </button>
+                    {{ form_end(registrationForm) }} #}
                 </div>
                 <img class="d-block mx-auto p-2 mb-4 mt-4" style="width:500px; height:auto" src="/img/choucador.jpg" alt=" oiseauchoucador">
             </div>
